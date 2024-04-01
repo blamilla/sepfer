@@ -1,0 +1,2176 @@
+/*
+	Theme Name: Fernandez Sepelios
+	Theme URI: http://aride.com.ar
+	Description: Wordpress theme para Fernandez Sepelios
+	Version: 1
+	Author: ARIDE
+	Author URI: http://aride.com.ar
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+/*
+$grey: #F1F3F4;
+$black: #1E1E1E;
+$green: #00D0A6;
+$green_dark: darken($green, 0.2); 
+$white: #ffffff;
+$grey_dark: #727272;
+$grey_light: #C6C5C5;
+$white_dirty: #E5E5E5;
+*/
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//fonts/BebasNeue-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//fonts/Montserrat-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//fonts/Montserrat-Regular.ttf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url(http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//fonts/Lora-Regular.ttf);
+  font-weight: normal;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  font-family: "Montserrat";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px 0px;
+}
+
+ul li {
+  text-transform: uppercase;
+  line-height: 2.5em;
+  border-bottom: 0.5px solid #dfdfdf;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  color: #41474C;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.hide-desktop {
+  display: none;
+}
+
+.hide-mobile {
+  display: block;
+}
+
+/* Create the parallax scrolling effect */
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.textoLogo {
+  color: #C0A34A;
+  font-family: Vivaldi;
+  font-size: 70px;
+  line-height: 86px;
+}
+
+.sepeliosLogo {
+  color: #302F2F;
+  font-family: Perpetua;
+  font-size: 22px;
+  line-height: 25px;
+}
+
+.col-6 {
+  width: 50% !important;
+}
+
+.tituloSeccion {
+  text-transform: uppercase;
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 31px;
+  letter-spacing: 10px;
+  padding-bottom: 15px;
+}
+
+.textoSeccion {
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.textoSeccion span, .textoSeccion p {
+  font-family: Lora;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.boton {
+  text-transform: uppercase;
+  background-color: #C0A34A;
+  color: #fff;
+  height: 40px;
+  width: 200px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+  outline: none;
+}
+
+.boton:hover {
+  background-color: #fff;
+  color: #41474C;
+}
+
+.boton:hover a {
+  color: #41474C;
+}
+
+.boton a {
+  color: #fff;
+}
+
+.boton a:hover {
+  color: #41474C;
+}
+
+.pagination {
+  color: #41474C;
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 18px;
+  word-spacing: 20px;
+}
+
+@media (max-width: 768px) {
+  .hide-desktop {
+    display: block;
+  }
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #C0A34A;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #C0A34A, 0 0 5px #C0A34A;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -moz-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  -o-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 999999;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #C0A34A;
+  border-left-color: #C0A34A;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  -moz-animation: pace-spinner 400ms linear infinite;
+  -ms-animation: pace-spinner 400ms linear infinite;
+  -o-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes pace-spinner {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes pace-spinner {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes pace-spinner {
+  0% {
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pace-spinner {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+ul.nav-menu {
+  list-style: none;
+  margin: 0px 0px;
+  padding: 25px 0px;
+}
+
+ul.nav-menu li {
+  float: left;
+  border: none;
+}
+
+.nav li + li {
+  background: url("http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//img/icons/Oval.png") no-repeat center left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-telefono-home {
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  top: auto;
+  z-index: 100;
+}
+
+.btn-telefono-home.hover {
+  opacity: 0.8;
+}
+
+.btn-telefono-home img {
+  width: 50px;
+  height: 50px;
+  fill: white;
+  vertical-align: middle;
+}
+
+.headerSection {
+  display: flex;
+  height: 60px;
+  background-color: #0A3B22;
+}
+
+.headerSection .col-12 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.headerSection .col-12 .col-3 {
+  width: 20%;
+}
+
+.headerSection .col-12 .headerInfoContainer {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.headerSection .col-12 .headerInfoContainer .headerInfo {
+  font-family: 'Lora';
+  font-size: 16px;
+  font-weight: bold;
+  color: #C0A34A;
+  font-style: italic;
+  margin-left: 30px;
+}
+
+.headerSection .col-12 .headerContactoContainer {
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.headerSection .col-12 .headerContactoContainer div {
+  padding-right: 25px;
+}
+
+.headerSection .col-12 .headerContactoContainer span, .headerSection .col-12 .headerContactoContainer a {
+  font-family: Montserrat;
+  font-size: 14px;
+}
+
+.headerSection .col-12 .headerContactoContainer .headerTelefono span {
+  padding-left: 10px;
+}
+
+.headerSection .col-12 .headerContactoContainer .headerMail span {
+  padding-left: 10px;
+}
+
+.headerSection .col-12 .col-5 {
+  width: 40%;
+}
+
+.headerSection .col-12 .col-6 {
+  width: 50%;
+}
+
+.headerSection span, .headerSection a {
+  color: #ffffff;
+}
+
+.topSection {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.topSection .header {
+  width: 100%;
+}
+
+.topSection .header .menu .logo {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px 0px;
+}
+
+.topSection .header .menu .logo span {
+  display: flex;
+}
+
+.topSection .header .menu .nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #F7F4EB;
+}
+
+.topSection .header .menu .nav a {
+  color: #000;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 10px 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-family: 'Montserrat';
+  transition: all 300ms ease;
+}
+
+.topSection .header .menu .nav a .active {
+  background: rgba(30, 30, 30, 0.8);
+}
+
+.topSection .header .menu .nav a:hover {
+  color: #fff;
+  background: #C0A34A;
+}
+
+.topSection .header .menu .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  height: 60px;
+  align-items: center;
+  float: right;
+  width: 10%;
+}
+
+.topSection .header.mobile {
+  margin-top: 8px;
+}
+
+.topSection .header.mobile .nav .logo {
+  height: auto;
+  z-index: 9999999;
+  width: 160px;
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding: 5px 0px;
+  transform: translate(-7%, 0);
+}
+
+.topSection .header.mobile .nav .logo img {
+  width: 70px;
+}
+
+.topSection .header.mobile .nav .burger {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32px;
+  height: 24px;
+  margin-left: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  margin-top: 30px;
+  /* color: green; */
+  float: left;
+  z-index: 99999;
+}
+
+.topSection .header.mobile .nav .burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  z-index: 99999999;
+  background-color: #C0A34A;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.5s;
+  transition: opacity 0.3s, -webkit-transform 0.5s;
+  -moz-transition: transform 0.5s, opacity 0.3s, -moz-transform 0.5s;
+  transition: transform 0.5s, opacity 0.3s;
+  transition: transform 0.5s, opacity 0.3s, -webkit-transform 0.5s, -moz-transform 0.5s;
+}
+
+.topSection .header.mobile .nav .burger.in span:first-child {
+  background-color: #C0A34A;
+  -webkit-transform: rotate(-45deg) translateY(11px) translateX(-11px);
+  -moz-transform: rotate(-45deg) translateY(11px) translateX(-11px);
+  -ms-transform: rotate(-45deg) translateY(11px) translateX(-11px);
+  transform: rotate(-45deg) translateY(11px) translateX(-11px);
+}
+
+.topSection .header.mobile .nav .burger.in span:nth-child(2) {
+  opacity: 0;
+}
+
+.topSection .header.mobile .nav .burger.in span:last-child {
+  background-color: #C0A34A;
+  -webkit-transform: rotate(45deg) translateY(-3px) translateX(-3px);
+  -moz-transform: rotate(45deg) translateY(-3px) translateX(-3px);
+  -ms-transform: rotate(45deg) translateY(-3px) translateX(-3px);
+  transform: rotate(45deg) translateY(-3px) translateX(-3px);
+}
+
+.topSection .header.mobile .menu-mobile {
+  display: block;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding-top: 160px;
+}
+
+.topSection .header.mobile .menu-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topSection .header.mobile .menu-mobile ul li {
+  text-align: center;
+  font-size: 33px;
+  padding: 10px;
+  opacity: 0;
+  transition-duration: 300ms;
+  transform: translateX(-40px);
+  width: 100%;
+  font-size: 22px;
+  padding: 2px 10px;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(1) {
+  transition-delay: 100ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(7) {
+  transition-delay: 700ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(8) {
+  transition-delay: 800ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(9) {
+  transition-delay: 900ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li:nth-child(10) {
+  transition-delay: 1000ms;
+}
+
+.topSection .header.mobile .menu-mobile ul li.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.topSection .header.mobile .menu-mobile ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #C0A34A;
+}
+
+.bannerSection {
+  background-image: url("http://fs.aride.com.ar/wp-content/themes/fernandezsepelios//img/banner-home.jpg");
+  background-size: cover;
+  background-position: center top;
+  min-height: 400px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.bannerSection .bannerTextoContainer {
+  position: absolute;
+  right: 150px;
+  opacity: 0.96;
+  background-color: rgba(10, 59, 34, 0.75);
+  height: 230px;
+  width: 360px;
+  display: flex;
+  align-items: center;
+}
+
+.bannerSection .bannerTextoContainer .bannerTexto {
+  font-family: Lora;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 41px;
+  color: #fff;
+  padding: 0px 60px;
+}
+
+footer {
+  background: #0A3B22;
+  padding: 40px 0px;
+}
+
+footer div, footer p, footer strong, footer span, footer ul, footer li, footer a {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+}
+
+footer .footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .footer div {
+  margin: 20px;
+}
+
+footer .footer .footerTitulo {
+  text-transform: uppercase;
+  color: #C0A34A;
+  font-weight: bold;
+}
+
+footer .footer .footerMenu {
+  width: auto;
+}
+
+footer .footer .footerMenu li {
+  width: 200px;
+}
+
+footer .footer .footerLogo {
+  display: flex;
+  justify-content: center;
+}
+
+footer .footer .footerLogo .logo a {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .footer .footerLogo .logo a .sepeliosLogo {
+  color: #fff;
+}
+
+footer .footer .footerContacto {
+  width: auto;
+}
+
+footer .footer .footerContacto .footerTexto {
+  margin: 0px;
+}
+
+footer .footer .footerContacto .footerTexto p {
+  line-height: 2;
+}
+
+.espaciado {
+  padding: 70px 0px;
+}
+
+.institucionalSection {
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.institucionalSection .institucionalContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.institucionalSection .institucionalContainer .institucionalInfo {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.institucionalSection .institucionalContainer .institucionalInfo .institucionalLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.institucionalSection .institucionalContainer .institucionalInfo .institucionalLema {
+  padding-top: 20px;
+}
+
+.institucionalSection .institucionalContainer .institucionalInfo .institucionalLema span {
+  font-family: Lora;
+  font-size: 18px;
+  line-height: 23px;
+  font-style: italic;
+}
+
+.institucionalSection .institucionalContainer .institucionalInfo img {
+  padding-top: 20px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px 0px 0px 0px;
+  max-width: 1400px;
+  justify-content: center;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .col-4 {
+  width: 33.33333%;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision {
+  max-width: 400px;
+  width: 100%;
+  padding: 20px;
+  /* Style the tab content */
+  /* Go from zero to full opacity */
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab {
+  overflow: hidden;
+  /* Style the buttons that are used to open the tab content */
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 5px;
+  transition: 0.3s;
+  font-family: Lora;
+  color: #41474C;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 15px;
+  /* Change background color of buttons on hover */
+  /* Create an active/current tablink class */
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab button:hover {
+  border-bottom: 2px solid #C0A34A;
+  color: #C0A34A;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab button.active {
+  color: #C0A34A;
+  border-bottom: 2px solid #C0A34A;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab button:last-child {
+  margin-right: 0px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent {
+  display: none;
+  padding: 5px 0px;
+  animation: fadeEffect 1s;
+  /* Fading effect takes 1 second */
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent p {
+  color: #898989;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent p em, .institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent p strong {
+  font-family: Montserrat;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent ul {
+  list-style-type: square;
+  padding-left: 25px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tabcontent ul li {
+  text-transform: none;
+  border: none;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalImg {
+  max-width: 400px;
+  width: 400px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios {
+  max-width: 450px;
+  width: 410px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios span {
+  color: #898989;
+  font-family: Lore;
+  font-size: 19px;
+  line-height: 22px;
+  font-style: italic;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios .institucionalServiciosItems {
+  padding: 10px 0px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios .institucionalServiciosItems li {
+  width: 220px;
+}
+
+.institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios .institucionalServiciosItems li a {
+  font-family: Lora;
+}
+
+.instalacionesSection .instalacionesContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesImagen {
+  min-width: 375px;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesImagen img {
+  width: 100%;
+  height: 100%;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesTexto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 375px;
+  background-color: #0A3B22;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesTexto div, .instalacionesSection .instalacionesContainer .instalacionesTexto p, .instalacionesSection .instalacionesContainer .instalacionesTexto strong {
+  color: #fff;
+  line-height: 1.3em;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer .textoSeccion {
+  padding: 20px 0px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer .textoSeccion p {
+  font-size: 16px;
+}
+
+#avisosFunebres {
+  transition: all 1s ease;
+}
+
+#avisosFunebres:target {
+  transition: all 1s ease;
+}
+
+.avisosFunebresSection {
+  background: rgba(247, 244, 235, 0.37);
+}
+
+.avisosFunebresSection .avisosContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas {
+  padding: 50px 0px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisoIndividual {
+  background-color: #0A3B22;
+  flex-basis: calc(30% - 30px);
+  margin: 15px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo {
+  display: flex;
+  flex-direction: row;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles {
+  height: 215px;
+  max-width: 275px;
+  min-width: 230px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosInfoDetallesTop {
+  display: flex;
+  flex-direction: column;
+  height: 135px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosInfoDetallesTop .avisosTitulo {
+  color: #fff;
+  font-family: Lora;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 28px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosInfoDetallesTop .avisosFecha {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosInfoDetallesTop .avisosTexto {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosDeParteDe {
+  display: flex;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosDeParteDe .col-1 {
+  font-size: 20px;
+  width: 10%;
+  text-align: center;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosDeParteDe .col-11 {
+  width: 90%;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosInfoDetalles .avisosInfoDetallesContainer .avisosDeParteDe span {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+.avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosImagen img {
+  height: 100%;
+}
+
+.tratamientoDueloSection {
+  background: #fff;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas {
+  padding: 50px 0px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .dueloIndividual {
+  background-color: #F7F4EB;
+  flex-basis: calc(30% - 30px);
+  margin: 15px;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosImagen img {
+  width: 100%;
+  height: 100%;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles {
+  height: 340px;
+  width: 325px;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer {
+  padding: 0px 15px 0px 35px;
+  display: flex;
+  flex-direction: column;
+  text-transform: none;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosFecha {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding-top: 15px;
+  height: 30px;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosTitulo {
+  color: #41474C;
+  font-family: Lora;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 28px;
+  height: 60px;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosTexto {
+  color: #898989;
+  font-family: Lora;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  height: 165px;
+  text-overflow: ellipsis;
+  max-width: 260px;
+  overflow: hidden;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosLeerMas {
+  display: flex;
+  margin-top: 0px;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosLeerMas .col-1 {
+  width: 10%;
+  text-align: center;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosLeerMas .col-11 {
+  width: 90%;
+}
+
+.tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosLeerMas span, .tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosLeerMas a {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.contactoSection .contactoContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contactoSection .contactoContainer .formularioContactoContainer {
+  background: #F7F4EB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  min-width: 375px;
+}
+
+.contactoSection .contactoContainer .formularioContactoContainer .formularioContacto {
+  padding-top: 20px;
+}
+
+.contactoSection .contactoContainer .formularioContactoContainer .formularioContacto .wpcf7 .wpcf7-text {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #E2E2DF;
+  color: #898989;
+  font-family: Lora;
+  font-size: 16px;
+  outline: none;
+}
+
+.contactoSection .contactoContainer .formularioContactoContainer span.wpcf7-not-valid-tip {
+  font-size: 12px;
+}
+
+.contactoSection .contactoContainer .formularioContactoContainer div.wpcf7-validation-errors, .contactoSection .contactoContainer .formularioContactoContainer div.wpcf7-acceptance-missing {
+  border: 2px solid #C0A34A;
+  font-size: 12px;
+}
+
+.contactoSection .contactoContainer .contactoMapa {
+  min-width: 375px;
+}
+
+.default-template {
+  display: flex;
+  justify-content: center;
+}
+
+.default-template .postContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  width: 100%;
+}
+
+.default-template .postContainer .postContent {
+  padding: 40px 0px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.default-template .postContainer .postContent p {
+  padding: 0px 25px;
+}
+
+.default-template .postContainer .postContent ul {
+  list-style-type: square;
+  padding-left: 75px;
+}
+
+.default-template .postContainer .postContent ul li {
+  text-transform: none;
+  border: none;
+}
+
+.dueloPostContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.dueloPostContainer .dueloPostInfo {
+  max-width: 1200px;
+  display: flex;
+  padding: 60px 60px 30px 60px;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 50px 20px 0px;
+  border-right: 3px solid #DCDCDC;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostTitulo {
+  font-family: Lora;
+  font-size: 36px;
+  font-weight: bold;
+  color: #41474C;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostTitulo h1 {
+  margin-top: 0px;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostIntroTexto {
+  color: #979797;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostFecha {
+  color: #41474C;
+  font-family: Montserrat;
+  font-size: 12px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostImagen {
+  padding: 30px 0px;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostImagen img {
+  width: 100%;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostContenido {
+  background-color: #F7F4EB;
+  padding: 15px 35px;
+}
+
+.dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostContenido p {
+  color: #41474C;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer hr {
+  border: 1px solid #DCDCDC;
+  width: 100%;
+  background: #DCDCDC;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosArticulosTitulo {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo .otrosDuelosInfoDetalles {
+  display: flex;
+  flex-direction: column;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo .otrosDuelosInfoDetalles .dueloPostTitulo {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo .otrosDuelosInfoDetalles .otrosDuelosIntroTexto {
+  color: #41474C;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 15px 0px;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo .otrosDuelosInfoDetalles .otrosDuelosLeerMas a {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.dueloPostContainer .dueloPostInfo .otrosArticulosContainer .otrosDuelosInfo .otrosDuelosInfoDetalles .otrosDuelosFecha {
+  color: #41474C;
+  font-family: Montserrat;
+  font-size: 12px;
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.avisoFunebrePostContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost {
+  max-width: 600px;
+  max-height: 380px;
+  display: flex;
+  padding: 60px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostImagen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostImagen img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 35px;
+  background: #0A3B22;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTitulo {
+  font-family: Lora;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTitulo h1 {
+  color: #fff;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostFecha, .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebreIconoReligion {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostFecha .avisoFunebreIconoReligion, .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebreIconoReligion .avisoFunebreIconoReligion {
+  padding-right: 15px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTexto {
+  padding: 15px 0px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTexto p {
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostDeParte {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.commentsContainer {
+  background-color: #F7F4EB;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.commentsContainer .comments {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.commentsContainer .comments .tituloComments {
+  color: #C0A34A;
+  font-family: Lora;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  padding-bottom: 11px;
+}
+
+.commentsContainer .comments .dejarMensajeContainer {
+  padding-top: 60px;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-comment p {
+  margin-bottom: 0px;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-comment p textarea {
+  width: 99%;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-comment .asunto {
+  width: 50%;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-author .comment-autor {
+  width: 50%;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .comment-form-email .comment-email {
+  width: 50%;
+}
+
+.commentsContainer .comments .dejarMensajeContainer .comment-respond .comment-form .form-submit {
+  text-align: right;
+}
+
+.commentsContainer .mensajes .mensajeContainer {
+  background: #fff;
+  border: none;
+  text-transform: none;
+}
+
+.commentsContainer .mensajes .mensajeContainer div {
+  font-family: Lora;
+  color: #898989;
+}
+
+.commentsContainer .mensajes .mensajeContainer .autor-mensaje {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.commentsContainer .mensajes .mensajeContainer .fecha-mensaje {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.commentsContainer .mensajes .mensajeContainer .mensaje {
+  padding-top: 20px;
+  color: #898989;
+}
+
+.commentsContainer .mensajes .comment {
+  background: #fff;
+  border: none;
+  padding: 25px;
+  text-transform: none;
+  margin-top: 25px;
+}
+
+.commentsContainer .mensajes .comment div {
+  color: #898989;
+}
+
+.commentsContainer .mensajes .comment .autor-mensaje {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.commentsContainer .mensajes .comment .fecha-mensaje {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.commentsContainer .mensajes .comment .mensaje {
+  padding-top: 20px;
+  color: #898989;
+}
+
+.galeria {
+  max-width: 1200px;
+  margin: 20px auto;
+  /*.lightbox:hover img{
+      transform: translate(-50%, -50%) rotateY(180deg);
+    }*/
+}
+
+.galeria .gallery-container {
+  column-width: 300px;
+  column-gap: 5px;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+.galeria .gallery-container img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.galeria .lightbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #7f8c8d;
+  perspective: 1000;
+}
+
+.galeria .filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(20px);
+  opacity: 0.5;
+  background-position: center;
+  background-size: cover;
+}
+
+.galeria .lightbox img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  max-height: 95vh;
+  max-width: calc(95vw - 100px);
+  transition: 0.8s cubic-bezier(0.7, 0, 0.4, 1);
+  transform-style: preserve-3d;
+  object-fit: contain;
+}
+
+.galeria [class^="arrow"] {
+  height: 200px;
+  width: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.galeria [class^="arrow"]:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 15px;
+  height: 15px;
+}
+
+.galeria .arrowr {
+  right: 0;
+}
+
+.galeria .arrowr:after {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.galeria .arrowl {
+  left: 0;
+}
+
+.galeria .arrowl:after {
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+}
+
+.galeria .close {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.4);
+  margin: 20px;
+  cursor: pointer;
+}
+
+.galeria .close:after,
+.galeria .close:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: #e74c3c;
+}
+
+.galeria .close:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.galeria .close:before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.galeria .title {
+  font-size: 20px;
+  color: #000;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: .6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tracking-in-expand-fwd {
+  animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes tracking-in-expand-fwd {
+  0% {
+    letter-spacing: -.5em;
+    transform: translateZ(-700px);
+    opacity: 0;
+  }
+  40% {
+    opacity: .6;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.text-focus-in {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.slide-fwd-center {
+  animation: slide-fwd-center 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/* MEDIA QUERIES */
+/* MEDIA QUERIES */
+@media (max-width: 1080px) {
+  .topSection .hide-mobile {
+    display: none;
+  }
+  .topSection .hide-desktop {
+    display: block;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .bannerSection {
+    background-position: 20%;
+  }
+  .bannerSection .bannerTextoContainer {
+    right: 25px;
+    height: 210px;
+    width: 250px;
+  }
+  .bannerSection .bannerTextoContainer .bannerTexto {
+    font-size: 24px;
+    padding: 0 30px;
+  }
+  .institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalServicios {
+    padding: 15px;
+  }
+  .institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision {
+    padding: 15px 10px;
+  }
+  .institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalMision .tab button {
+    font-size: 13px;
+    margin-right: 5px;
+  }
+  .institucionalSection .institucionalContainer .institucionalItemsInfo .institucionalImg {
+    text-align: center;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesImagen {
+    min-width: 100%;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesTexto {
+    min-width: 100%;
+  }
+  .avisosFunebresSection .avisosContainer .tituloSeccion {
+    text-align: center;
+    padding: 15px;
+  }
+  .avisosFunebresSection .avisosContainer .avisoIndividual {
+    flex-basis: 80% !important;
+  }
+  .tratamientoDueloSection .tratamientoDueloContainer .tituloSeccion {
+    text-align: center;
+    padding: 15px;
+  }
+  .contactoSection .contactoContainer .formularioContactoContainer {
+    min-width: 100%;
+  }
+  .contactoSection .contactoContainer .contactoMapa {
+    min-width: 100%;
+    height: 500px;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .tituloSeccion {
+    text-align: center;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost {
+    max-width: 720px;
+    padding: 50px 0px;
+    justify-content: center;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostImagen {
+    min-width: 100px;
+    max-width: 220px;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo {
+    min-width: 245px;
+    max-width: 500px;
+    padding: 0;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo div {
+    padding: 15px;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTitulo {
+    padding: 15px;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo .avisoFunebrePostTitulo h1 {
+    font-size: 24px;
+  }
+  .duelo .dueloPostContainer .tituloSeccion {
+    text-align: center;
+  }
+  .duelo .dueloPostContainer .dueloPostInfo {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px 15px 30px 15px;
+  }
+  .duelo .dueloPostContainer .dueloPostInfo .contenidoPost {
+    width: 100%;
+    border-right: none;
+    padding: 0px 0px 50px 0px;
+  }
+  .duelo .dueloPostContainer .dueloPostInfo .contenidoPost h1 {
+    font-size: 1.8rem;
+  }
+  .duelo .dueloPostContainer .dueloPostInfo .contenidoPost .dueloPostContenido {
+    padding: 15px;
+  }
+  .duelo .dueloPostContainer .dueloPostInfo .otrosArticulosContainer {
+    padding-left: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 575px) {
+  .headerSection {
+    height: auto;
+  }
+  .headerSection .col-12 .col-6 {
+    padding-left: 30px;
+    max-width: 500px;
+    width: 100% !important;
+  }
+  .headerSection .col-12 .col-6.headerInfoContainer {
+    display: none;
+  }
+  .headerSection .col-12 .col-6.headerInfoContainer .headerInfo {
+    margin-left: 0px;
+  }
+  .headerSection .col-12 .col-6.headerContactoContainer {
+    padding: 10px 30px;
+    justify-content: flex-start;
+  }
+  .headerSection .col-12 .col-6.headerContactoContainer .headerTelefono {
+    display: flex;
+  }
+  .headerSection .col-12 .col-6.headerContactoContainer .headerMail {
+    display: flex;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesTexto {
+    min-width: 100%;
+    max-width: 300px;
+    padding: 25px 0px;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer {
+    padding: 0;
+    max-width: 300px;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer .tituloSeccion {
+    font-size: 20px;
+  }
+  .instalacionesSection .instalacionesContainer .instalacionesTexto .instalacionesTextoContainer .textoSeccion {
+    padding: 0;
+    max-width: 300px;
+  }
+  .avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo {
+    flex-direction: column-reverse;
+  }
+  .avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosImagen {
+    text-align: center;
+    padding: 0px;
+  }
+  .avisosFunebresSection .avisosContainer .avisosCajas .listaAvisos .avisosInfo .avisosImagen img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .dueloIndividual .duelosInfo .duelosInfoDetalles {
+    width: 300px;
+  }
+  .tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .dueloIndividual .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosTitulo {
+    height: auto;
+  }
+  .tratamientoDueloSection .tratamientoDueloContainer .duelosCajas .listaDuelos .dueloIndividual .duelosInfo .duelosInfoDetalles .duelosInfoDetallesContainer .duelosTexto {
+    height: 140px;
+  }
+  .contactoSection .contactoContainer .formularioContactoContainer .formularioContacto {
+    padding-top: 20px;
+    max-width: 300px;
+  }
+  .contactoSection .contactoContainer .formularioContactoContainer .formularioContacto .wpcf7 .wpcf7-text {
+    width: 300px;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost {
+    max-width: 350px;
+    padding: 75px 5px;
+    flex-direction: column;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostImagen {
+    text-align: center;
+    padding: 0;
+    min-width: 100px;
+    max-width: 100%;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostImagen img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo {
+    min-width: 200px;
+    max-width: 100%;
+  }
+  .aviso-funebre .avisoFunebrePostContainer .avisoFunebrePost .avisoFunebrePostInfo div {
+    padding: 10px;
+  }
+  .aviso-funebre .commentsContainer .comments .mensajes .mensajeContainer .comment {
+    padding: 10px 15px;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 33.75em) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 60em) {
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33333%;
+}
+
+.col-2-sm {
+  width: 12.66667%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33333%;
+}
+
+.col-5-sm {
+  width: 37.66667%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33333%;
+}
+
+.col-8-sm {
+  width: 62.66667%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33333%;
+}
+
+.col-11-sm {
+  width: 87.66667%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+@media only screen and (min-width: 45em) {
+  .col-1 {
+    width: 4.33333%;
+  }
+  .col-2 {
+    width: 12.66667%;
+  }
+  .col-3 {
+    width: 21%;
+  }
+  .col-4 {
+    width: 29.33333%;
+  }
+  .col-5 {
+    width: 37.66667%;
+  }
+  .col-6 {
+    width: 46%;
+  }
+  .col-7 {
+    width: 54.33333%;
+  }
+  .col-8 {
+    width: 62.66667%;
+  }
+  .col-9 {
+    width: 71%;
+  }
+  .col-10 {
+    width: 79.33333%;
+  }
+  .col-11 {
+    width: 87.66667%;
+  }
+  .col-12 {
+    width: 96%;
+  }
+  .hidden-sm {
+    display: block;
+  }
+}

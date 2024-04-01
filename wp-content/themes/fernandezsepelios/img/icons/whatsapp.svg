@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Whatsapp</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M3.8432,36.1152 C1.5392,32.5536 0.2,28.308 0.2,23.7528 C0.2,11.1696 10.4168,0.9528 23,0.9528 C35.5832,0.9528 45.8,11.1696 45.8,23.7528 C45.8,36.336 35.5832,46.5528 23,46.5528 C18.7352,46.5528 14.744,45.3792 11.3288,43.3392 L0.2,47.0472 L3.8432,36.1152 Z" id="path-1"></path>
+        <filter x="-15.4%" y="-10.8%" width="130.7%" height="130.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Fernandez-Web-FINAL" transform="translate(-1348.000000, -644.000000)">
+            <g id="Whatsapp" transform="translate(1346.000000, 640.000000)">
+                <rect id="Artboard1" x="0" y="0" width="58" height="58"></rect>
+                <g id="Group" transform="translate(6.000000, 5.000000)">
+                    <g id="Shape">
+                        <g>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#C0A44B" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M8.108,34.3296 C5.9816,31.344 4.7312,27.6936 4.7312,23.7528 C4.7312,13.6704 12.9176,5.484 23,5.484 C33.0824,5.484 41.2688,13.6704 41.2688,23.7528 C41.2688,33.8352 33.0824,42.0192 23,42.0192 C19.184,42.0192 15.6416,40.848 12.7088,38.844 L5.84,41.1336 L8.108,34.3296 Z" fill="#FFFFFF"></path>
+                    </g>
+                    <path d="M17.5136,28.4952 C14.816,25.1976 13.016,21.1608 12.452,16.7832 C12.3008,15.564 12.7064,14.34 13.5584,13.4544 C14.4104,12.5688 15.6176,12.1152 16.8416,12.2184 L16.9592,12.2304 C16.9592,12.2304 18.3056,12.5904 19.0424,12.7896 C19.3352,12.8688 19.568,13.0872 19.6664,13.3728 C19.9976,14.3568 20.78,16.668 21.1496,17.7552 C21.2696,18.108 21.1592,18.4992 20.876,18.7392 C20.3168,19.2096 19.3928,19.9872 18.8168,20.4744 C18.5072,20.736 18.4088,21.1704 18.5768,21.5376 C19.2464,22.9968 20.1008,24.36 21.1136,25.5936 C22.1552,26.7984 23.3528,27.8712 24.6776,28.7784 C25.0136,29.0064 25.4576,28.9824 25.7672,28.7208 C26.3456,28.236 27.2696,27.4584 27.8264,26.988 C28.112,26.748 28.5152,26.7072 28.844,26.8848 C29.852,27.432 31.9976,28.5936 32.9096,29.088 C33.176,29.232 33.3536,29.5008 33.38,29.8008 C33.4496,30.5616 33.5792,31.9488 33.5792,31.9488 L33.5696,32.0664 C33.464,33.2904 32.8136,34.404 31.796,35.0928 C30.7784,35.784 29.504,35.976 28.328,35.6208 C24.0752,34.3128 20.3768,31.8264 17.5784,28.572 L17.5136,28.4952 Z" id="Shape" fill="#C0A44B"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

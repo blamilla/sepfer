@@ -1,0 +1,15 @@
+.vscode/
+*.log
+.htaccess
+sitemap.xml
+sitemap.xml.gz
+database/
+wp-config.php
+wp-content/uploads/
+wp-content/themes/fernandezsepelios/README.md
+wp-content/themes/fernandezsepelios/database
+wp-content/themes/fernandezsepelios/gulpfile.js
+wp-content/themes/fernandezsepelios/sass/
+wp-content/themes/fernandezsepelios/node_modules/
+wp-content/themes/fernandezsepelios/package-lock.json
+wp-content/themes/fernandezsepelios/package.json
